@@ -3,7 +3,7 @@
 
 for pid in /proc/*/; do
         if [ -e "$pid/status" ]; then
-                process_name=$(awk -F: '/Name/{print $2}' "$pid/status" | tr -d '[:space:')
+                process_name=$(awk -F: '/Name/{print $2}' "$pid/status" | tr -d '[:space:]')
                 if [[ "$process_name" == *"bash"* ]]; then
                         pid_number=$(basename "$pid")
                         echo "$pid_number $process_name"
