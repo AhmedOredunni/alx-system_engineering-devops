@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#read the script's PID 
+script_pid=$(<script_pid.txt)
+#kill the proecess
+kill "$script_pid"
+

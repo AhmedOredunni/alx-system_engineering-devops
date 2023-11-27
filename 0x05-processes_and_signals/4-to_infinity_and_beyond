@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+#Save the script's PID to another file
+echo $$ > script_pid.txt
 #Display inifinity
 var=1
 while [ $var ]; do
